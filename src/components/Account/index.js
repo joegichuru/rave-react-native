@@ -11,7 +11,7 @@ export default class index extends Component {
   constructor(props) {
     super(props);
 
-    this.state = { value: '', dob: '', selectedDate: false, banks: [], accountbank: '', accountnumber: '', phonenumber: (this.props.phone == null) ? '' : this.props.phone, status: "", chargeResponseMessage: '', suggested_auth: "", vbvModal: false, vbvurl: '', dobErr: 'none', accountbankErr: 'none', accountnumberErr: 'none', phonenumberErr: 'none', inputErr: '#fff', otp: "", flwRef: "", otpModal: false, loading: false, otp: "", phone: (this.props.phone == null) ? '' : this.props.phone, accModal: false, background: '#f2f2f2', page: this.props.page };
+    this.state = { value: '', dob: '', selectedDate: false, banks: [], accountbank: '', accountnumber: '', phonenumber: (this.props.phone == null) ? '' : this.props.phone, status: "", chargeResponseMessage: '', suggested_auth: "", vbvModal: false, vbvurl: '', dobErr: 'none', accountbankErr: 'none', accountnumberErr: 'none', phonenumberErr: 'none', inputErr: '#fff', flwRef: "", otpModal: false, loading: false, otp: "", phone: (this.props.phone == null) ? '' : this.props.phone, accModal: false, background: '#f2f2f2', page: this.props.page };
 
     this.next = this.next.bind(this)
     this.confirmOtp = this.confirmOtp.bind(this);

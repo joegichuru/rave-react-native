@@ -25,6 +25,7 @@ export default class CardHeader extends Component {
   }
 
   render() {
+    let icon;
     if (this.props.colorTwo === '#F5A623') {
       icon = <Icon name='keyboard-arrow-down' color='#647482' />;
 

@@ -13,12 +13,12 @@ export default class AccModal extends Component {
   constructor(props) {
     super(props);
 
-    this.state = { dob: '', selectedDate: false, banks: [], accountnumber: '', phonenumber: (this.props.phone == null) ? '' : this.props.phone, dobErr: '#fff', accountbankErr: 'none', accountnumberErr: 'none', phonenumberErr: '#fff', otp: "", flwRef: "", otpModal: false, loading: false, otp: "", phone: (this.props.phone == null) ? '' : this.props.phone, cardErr: '#fff', accountbank: this.props.accountbank };
+    this.state = { dob: '', selectedDate: false, banks: [], accountnumber: '', phonenumber: (this.props.phone == null) ? '' : this.props.phone, dobErr: '#fff', accountbankErr: 'none', accountnumberErr: 'none', phonenumberErr: '#fff', otp: "", flwRef: "", otpModal: false, loading: false, phone: (this.props.phone == null) ? '' : this.props.phone, cardErr: '#fff', accountbank: this.props.accountbank };
     this.confirmOtp = this.confirmOtp.bind(this);
     this.pay = this.pay.bind(this);
     this.check = this.check.bind(this);
     this.confirmVBV = this.confirmVBV.bind(this);
-    
+
   }
 
 
@@ -326,7 +326,7 @@ export default class AccModal extends Component {
     }
 
     return (
-      
+
         <KeyboardAwareScrollView style={{ backgroundColor: this.props.background, width: "100%", paddingVertical: 60, paddingHorizontal: 30 }} keyboardShouldPersistTaps='always'>
           {/* <Otp primarycolor={this.props.primarycolor} secondarycolor={this.props.secondarycolor} otpModal={this.state.otpModal} confirm={this.confirmOtp} otp={this.state.otp} chargeResponseMessage={this.state.chargeResponseMessage} otpEdit={(otp) => this.setState({ otp })} /> */}
           <VBVSecure vbvModal={this.state.vbvModal} url={this.state.vbvurl} confirm={this.confirmVBV} />
@@ -375,7 +375,7 @@ export default class AccModal extends Component {
 
             {zenith}
 
- 
+
           </View>
 
           <TouchableOpacity onPress={this.pay} style={{ width: "100%", marginTop: 20 }} disabled={(this.state.loading == false) ? false : true}>
@@ -384,8 +384,8 @@ export default class AccModal extends Component {
             </View>
           </TouchableOpacity>
         </KeyboardAwareScrollView>
-        
-      
+
+
     )
   }
 }

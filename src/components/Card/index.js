@@ -47,7 +47,6 @@ export default class index extends Component {
       otpModal: false,
       intlModal: false,
       loading: false,
-      otp: "",
       intl: {},
       checked: false,
       address: "",
@@ -88,6 +87,7 @@ export default class index extends Component {
         cardno: value.replace(/\s/g, "").replace(/[^0-9]/gi, "")
       });
     } else {
+      let len;
       for (i = 0, len = match.length; i < len; i += 4) {
         parts.push(match.substring(i, i + 4));
       }
