@@ -35,14 +35,21 @@ export default class index extends Component {
             }
         });
         let lockIcon, closeIcon;
-        lockIcon = <Icon name="md-lock" style={{ color: "#d1d1d1", marginTop: 10, marginRight: 0 }} />;
-        
-        closeIcon = <Icon name='md-close-circle' style={{ color: '#d1d1d1', marginTop: 0, marginRight: 0 }} />;
+        lockIcon = <Icon name="md-lock" style={{ color: "green", marginTop: 10, marginRight: 0 }} />;
+
+        closeIcon = <Icon name='close' type={'AntDesign'}
+                          fontSize={24}
+                          style={{ color: '#000', marginTop: 0, marginRight: 0 }} />;
         return (
             <KeyboardAvoidingView behavior="padding" enabled>
                 <KeyboardAwareScrollView style={styles.container} keyboardShouldPersistTaps='always'>
                     <View style={{ flex: 1 }}>
-                        <View style={{ marginTop: 30, flexDirection: 'row', justifyContent: "space-between" }}><Text style={{ fontSize: 13, fontWeight: '400' }}>{lockIcon} SECURED BY FLUTTERWAVE</Text>
+                        <View style={{ marginTop: 30,
+                            flexDirection: 'row',
+                            borderBottomColor:'#E1E1E1',
+                            borderBottomWidth:1,
+                            justifyContent: "space-between" }}>
+                            <Text style={{ fontSize: 13, fontWeight: '400' }}>{lockIcon} SECURED BY FLUTTERWAVE</Text>
                             <TouchableOpacity onPress={this.closeRave}>{closeIcon}</TouchableOpacity>
                         </View>
                         <Text style={styles.text}>How would you</Text>
